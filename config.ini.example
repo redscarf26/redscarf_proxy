@@ -1,0 +1,13 @@
+; Copy to config.ini and edit in a plain text editor.
+
+[RedScarf]
+; _classic_ directory, or the full path to WowClassic.exe
+wow_path=D:\World of Warcraft\_classic_
+
+; 3.3.5a auth server
+server_ip=127.0.0.1
+server_port=3724
+
+; Optional. Default is Arctium WoW Launcher.exe next to redscarf.exe.
+; Relative paths are resolved from that directory. Absolute paths are accepted.
+arctium_path=Arctium WoW Launcher.exe

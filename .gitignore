@@ -1,0 +1,34 @@
+# Source / IDE
+.idea/
+.vscode/
+__pycache__/
+*.pyc
+*.exe~
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Local machine config and logs (wow_path is per-machine)
+config.ini
+launcher.log
+*.log
+
+# Disconnect packet dumps from saveDisconnectPackets — regenerated per crash
+disconnect-*.jsonl
+
+# Bundled and generated binaries — keep on disk, never commit
+*.exe
+*.dll
+build/
+
+# WoW client / game assets — never commit
+_classic_/
+Data/
+.build.info
+.product.db
+Launcher.db
+**/Logs/
+**/WTF/
+WowClassic.exe
+Wow.exe
+World of Warcraft Launcher.exe
