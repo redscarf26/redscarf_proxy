@@ -201,8 +201,8 @@ func taxiNodeUsable(mask []byte, node uint32) bool {
 }
 
 // ShortestTaxiRoute returns a directed route containing source and destination.
-// It uses the build-54261 taxi graph and excludes nodes absent from the server's
-// usable-node mask.
+// The graph is the 3.3.5a TaxiPath table, including Northrend, and excludes
+// nodes absent from the server's usable-node mask.
 func ShortestTaxiRoute(source, destination uint32, usable []byte) ([]uint32, error) {
 	if taxiPathGraphErr != nil {
 		return nil, taxiPathGraphErr

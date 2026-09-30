@@ -64,3 +64,18 @@ func TestShortestTaxiRoute(t *testing.T) {
 		t.Fatalf("route=%v err=%v", route, err)
 	}
 }
+
+func TestNorthrendTaxiRoutes(t *testing.T) {
+	usable := make([]byte, modernTaxiMaskBytes)
+	for i := range usable {
+		usable[i] = 0xff
+	}
+	wintergarde, err := ShortestTaxiRoute(253, 244, usable)
+	if err != nil || len(wintergarde) != 2 || wintergarde[0] != 253 || wintergarde[1] != 244 {
+		t.Fatalf("amberpine to wintergarde route=%v err=%v", wintergarde, err)
+	}
+	moaki, err := ShortestTaxiRoute(253, 294, usable)
+	if err != nil || len(moaki) != 3 || moaki[0] != 253 || moaki[1] != 244 || moaki[2] != 294 {
+		t.Fatalf("amberpine to moa'ki route=%v err=%v", moaki, err)
+	}
+}
